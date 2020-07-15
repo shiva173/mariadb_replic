@@ -8,8 +8,13 @@ services:
     build: .
     env_file: .env
     volumes:
+<<<<<<< HEAD
       - ./var/lib/mysql:/var/lib/mysql:rw
       - ./etc/mysql/my.cnf:/etc/mysql/my.cnf:rw
+=======
+      - ./var/lib/mysql:/var/lib/mysql
+      - ./etc/mysql/my.cnf:/etc/mysql/my.cnf
+>>>>>>> cc768c5d509845c8557f4a53fb2948ec6d6ebec8
     restart: always
     ports:
       - 3306:3306
