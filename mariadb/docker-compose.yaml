@@ -1,0 +1,16 @@
+
+version: '3'
+
+services:
+
+  mariadb:
+    container_name: slave_mariadb
+    build: .
+    env_file: .env
+    volumes:
+      - ./var/mysql:/var/lib/mysql
+      - ./etc/mysql/my.cnf:/etc/mysql/my.cnf
+    restart: always
+    ports:
+      - 3306:3306
+
